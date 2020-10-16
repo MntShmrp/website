@@ -217,3 +217,27 @@
   });
 
 })(jQuery);
+
+
+//Handles encryption etc.
+
+example = "hey";
+var encryptDiv = document.getElementById("encrypted")
+window.onload = ()=>{
+  encryptDiv.innerHTML = CryptoJS.AES.encrypt(
+    encryptDiv.innerHTML,"pwd");
+    encryptDiv.style.visibility = "hidden";
+  example = CryptoJS.AES.encrypt(example,"123456");
+}
+
+var keyBox = document.getElementById("key")
+function decrypt(){
+  key = keyBox.value;
+  console.log(key);
+  encryptDiv.innerHTML = CryptoJS.AES.decrypt(
+    encryptDiv.innerHTML,
+    key
+  ).toString(CryptoJS.enc.Utf8)
+  encryptDiv.style.visibility = "visible";
+  document.getElementById("pwd-prompt").style.visibility = "hidden";
+}

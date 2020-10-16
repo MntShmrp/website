@@ -38,6 +38,7 @@
 
 <body>
 
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
@@ -80,6 +81,7 @@
 
     </div>
   </header><!-- End Header -->
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -175,6 +177,28 @@
 
       </div>
     </section><!-- End About Section -->
+
+    <section id="reports" class="d-flex align-items-center">
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="section-title">
+          <h2>Description</h2>
+          <p>DERT helps you to understand changes in the code</p>
+        </div>
+
+        <div class="pwd-prompt text-center" id="pwd-prompt">
+          <div class="text-center">
+            This section is encrypted for the protection of reports. For access please contact email@email.com
+          </div>
+          <input id="key" type="text">    
+          <button class="dec-but" onclick="decrypt()">decrypt page</button>
+        </div>
+        <div class="encrypted" id="encrypted">
+          ENCRYPTEDSTUFFENCRYPTEDSTUFFENCRYPTEDSTUFFENCRYPTEDSTUFFENCRYPTEDSTUFFENCRYPTEDSTUFFENCRYPTEDSTUFFENCRYPTEDSTUFF
+        </div>
+    
+      </div>
+    </section>
 
     <!-- ======= Counts Section ======= -->
   <!--
@@ -1029,6 +1053,10 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Crypto -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+    integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
 
 </body>
 

@@ -1608,7 +1608,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .php-email-form button[type="submit"],  .dec-but{
   background: #2487ce;
   border: 0;
   padding: 10px 30px;
@@ -1617,7 +1617,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .php-email-form button[type="submit"]:hover, .dec-but:hover{
   background: #3194db;
 }
 
