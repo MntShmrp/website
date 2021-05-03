@@ -221,23 +221,17 @@
 
 //Handles encryption etc.
 
-example = "hey";
 var encryptDiv = document.getElementById("encrypted")
-window.onload = ()=>{
-  encryptDiv.innerHTML = CryptoJS.AES.encrypt(
-    encryptDiv.innerHTML,"pwd");
-    encryptDiv.style.visibility = "hidden";
-  example = CryptoJS.AES.encrypt(example,"123456");
-}
 
+val  = "U2FsdGVkX19Q1Yn2uKq9lq8mrZsAe4eA+YXyCaqPZSF7nouUvhUfccr3pU33+i/3YQD9IaLnqHO2fYe5IpSRrNTbcaNsYIEgrdnVdEFZG6RbdrI9DQMHpQlUOWCyyn1uGWzZNkIjVAk8rNlwips2z6hZuGEO2WXdFt16nTai/IpoJu1fGUX3I8Ncmr6Wlp6hvs3y2ZRdEbEizMF+WZr+MvL7CUcfNyBw0xIuylWtLbSiNcbdNqPmhZ4aWSmS9xGfpLEz24hblJNXMtjcVEnJtLfBxFxmpQmbZKCcJiPhKyA5CZgBEeNH7hM8XlyQ+7Npv4j/8Ti8bTZieekMkcK8aw9BtMtn5cNcSIMADfCal9VVYMCk4253m0Ptdc9i6x7mPq1Of3O5R+hL7tJaWBDhOw0wZGXw7WFIBWgbfDKDqItZTzDHizEQl1p+K2gJWYJJW11ZtTKR2uNwXAvFALjGLvtxwj9BzWT+E7Z89G+fShYJuS9eJBVBUGmyzMwnjrj8VabfhObKVQX5sPHApWuWLUPihjgToKqELTQHd5WY8rBwJN3Ipdnj8gzzUxSZuSVk35WlrAZZ5Ac16xoooqEguxU5YkN9no5d9RNTitU+GVUwrFmH2yFNRx5hZozx1AbYwPFAB+UP3ERNNJoHoGUgQ5kkJNF1sykb6o61ds+Ri6/iFrkxl3tdaICDYPHR8pXZNe0Pg6t9sJ25uyU+XNh9Zuy35GK3IJtJmHr30imLZqkC1wxm7CJTWsrukpz1HxY7eo9bY+xBqiJCqTVDIHeuv4b/hwQFhv3nxk2l3DAaisV2UlNaOKjGtSBey7IHKMSzEcu1QxH5fFzAUOHImpXd+E3fL3Xlq+DyK9qrGPBqL5149ZhhIpxDHs3PkCK7YcJGCbUDCMp9D0oaIcuPTC7CazyEK3TkhrkJWqZf2UMedekhXMzCy4BKmNKLND85Qf6mqBJAo/iuQCYS4m3T3sFDtIlSzyyzseX+ddQG2yIde0YQX1eFrXROpPE35TBLkOACRPcfYuhxO6pjdVlGI2PVIG+U/5vKZoPDcOCv9GwESs08q58bmjZNGGFFNVz8Lh26"
 var keyBox = document.getElementById("key")
 function decrypt(){
   key = keyBox.value;
-  console.log(key);
   encryptDiv.innerHTML = CryptoJS.AES.decrypt(
-    encryptDiv.innerHTML,
+    val,
     key
   ).toString(CryptoJS.enc.Utf8)
   encryptDiv.style.visibility = "visible";
   document.getElementById("pwd-prompt").style.visibility = "hidden";
 }
+
